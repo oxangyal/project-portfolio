@@ -9,29 +9,32 @@
     <link rel="icon"  sizes="32x32" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>Oxana's webpage</title>
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <h1 class="title_name">Oxana Michkasova</h1>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <h1 class="title_name">Oxana Michkasova</h1>
 <!-- Navigation -->
-        <nav class="header_nav">
-            <ul class="header_nav__list">
-                <li class="nav_item">
-                    <a href="" class="nav_link">Home</a></li>
-                <li class="nav_item">
-                    <a href="" class="nav_link">About</a></li>
-                <li class="nav_item">
-                    <a href="" class="nav_link">Portfolio</a></li>
-                <li class="nav_item">
-                    <a href="" class="nav_link">Contact</a></li>
-            </ul>
+            <nav class="header_nav">
+                <ul class="header_nav__list">
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Home</a></li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">About</a></li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Portfolio</a></li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">Contact</a></li>
+                </ul>
         <hr>
-        </nav>
-    </div>
+            </nav>
+        </div>
 </header>
 
 <main class="main">
@@ -61,17 +64,17 @@
             <div class="job_lists">
 
                 <p class="company_title">AngelEye Photography</p>
-                    <p class="company_position">Photographer/Business owner
-                Boston, MA, USA</p>
+                    <p class="company_position">Photographer/Business owner <br>
+                <span class="company_location">RI, NH, ME, MA, USA</span></p>
                 <p class="company_title" >Dwellworks</p>
-                    <p class="company_position"> Relocation consultant
-                Boston, MA, USA</p>
+                    <p class="company_position"> Relocation consultant <br>
+                        <span class="company_location">Boston, MA, USA</span></p>
                 <p class="company_title">Blueport Commerce</p>
-                    <p class="company_position">Digital Imaging Specialist
-                Watertown, MA,  USA</p>
+                    <p class="company_position">Digital Imaging Specialist <br>
+                        <span class="company_location">Watertown, MA,  USA</span></p>
                 <p class="company_title">AutoPartsConnect</p>
-                    <p class="company_position">Jr. Web Developer   
-                Budapest, Hungary</p> 
+                    <p class="company_position">Jr. Web Developer <br>   
+                        <span class="company_location">Budapest, Hungary</span></p> 
             </div>
         </div>
 </section>
@@ -100,9 +103,9 @@
         </div>
 
         <div class="connect_items">
-            <p><a href="mailto:oxana.mitch@gmail.com">Email</a></p>
-            <p><a href="https://github.com/oxangyal">GitHub</a></p>
-            <p><a href="https://www.instagram.com/angeleyelive/">Instagram</a></p>
+            <p><a href="mailto:oxana.mitch@gmail.com"><i class="fa-solid fa-paper-plane"></i></a></p>
+            <p><a href="https://github.com/oxangyal"><i class="fa-brands fa-github"></i></a></p>
+            <p><a href="https://www.instagram.com/angeleyelive/"><i class="fa-brands fa-square-instagram"></i></a></p>
         </div>
     </div>
 </section>
@@ -116,18 +119,18 @@
             <form name="leave_message">
                 <div class="form_inputs">
         <!-- <label for="name">Name:</label> -->
-                    <input type="text" name="name" required="true" placeholder="Name">
+                    <input type="text" name="name" required="true" placeholder="Your name">
         <br>
         <br>
         <!-- <label for="email">Email:</label> -->
-                    <input type="email" name="email" required="true" placeholder="Email">
+                    <input type="email" name="email" required="true" placeholder="email@example.com">
         <br>
         <br>
         <!-- <label for="message">Message:</label> -->
-                    <textarea name="message" required="true" placeholder="Your message"></textarea>
+                    <textarea name="message" required="true" placeholder="Leave a message"></textarea>
         <br>
         <br>
-                    <button type="submit" class="button_submit">Submit</button>
+                    <button type="submit" class="button_submit"><span class="button_text">Submit</span></button>
         <br>
     </div>
     </form>
@@ -136,15 +139,18 @@
 
 <!-- Messages section -->
 <section id="messages">
-    <h3 class="main_title">Messages</h3>
-        <ul>
+    <div class="messages_edit_field">
+        <h3 class="main_title">Messages</h3>
+            <ul class="buttons_edit_remove_done">
 
-        </ul>
+            </ul>
+    </div>
 </section>
 </main>
-
+</div>
 <footer>
 </footer>
 <script src="js/index.js"></script>
+<script src="https://kit.fontawesome.com/cdb3649559.js" crossorigin="anonymous"></script>
 </body>
 </html>
