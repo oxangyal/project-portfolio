@@ -1,0 +1,113 @@
+body {
+    background: url(/images/background.jpg) no-repeat;
+    background-size: cover;
+    width: 1040px;
+}
+.wrapper{
+    width: 1040px;
+    margin: 0;
+}
+* {
+    font-size: 16px;
+    color: rgb(20, 18, 18);
+    font-family: 'Poppins';
+    /* border: 2px solid blue */
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-size: 100%;
+    
+    /* overflow: hidden; */
+}
+
+h1{
+    color: rgba(26, 13, 123, 0.847);
+    font-weight: 900;
+    font-size: 1.6em;
+}
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 10px 10px;
+}
+
+p{
+    font-style: italic;
+    font-weight: 900;
+}
+
+
+
+.main_title{
+    font-weight: 900;
+    font-size: 1.3em;
+    color:rgba(26, 13, 123, 0.847);
+    text-shadow: 1px 1px 2px rgb(128, 60, 145);
+}
+
+.header_nav__list {list-style: none}
+
+.nav_link {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type=text],
+input[type=email] {
+    width: 250px;
+    height: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    background-color: rgb(220,227,224);
+}
+textarea {
+    width: 300px;
+    min-height: 150px;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    background-color: rgb(220,227,224);
+
+}
+
+.button_submit {
+    border-radius: 10px;
+    background-color:rgb(251,139,67);
+    width: 100px;
+    height: 50px;
+    box-shadow: 4px 4px 10px rgba(8, 8, 8, 0.5);
+    border: none;
+
+}
+.button_text{
+    color:#292695;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgb(128, 60, 145)
+}
+/* .leave_message {
+    box-shadow: #4208ff;
+    border-radius: 5em;
+} */
+.company_title {
+    font-weight: 900;
+    color: rgb(45, 123, 123);
+    text-shadow: 1px 1px 2px rgb(246, 255, 192);
+}
+.company_location{
+    font-weight: 200;
+    font-size: 12px;
+}
+.skills_items > ul{
+    list-style: none;
+}
+footer{
+    /* background-color: rgb(45, 123, 123); */
+    border-radius: 5px;
+    height: 50px;
+    width: 1040px;
+    box-shadow: 4px 4px 10px rgba(8, 8, 8, 0.5)
+}
