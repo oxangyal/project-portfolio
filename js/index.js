@@ -10,14 +10,16 @@ footer.appendChild(copyright);
 
     // Add Skills Section
 
-const skills = ["JavaScript", "HTML", "CCS", "Python", "GitHub", "Figma", "Photoshop"];
+const skills = ['./images/icon_js.png', "./images/icon_html.png", "./images/icon_css.png", "./images/icon_figma.png", "./images/icon_python.png", "./images/icon_ps.png", "./images/icon_git.png"];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector("ul");
 
 for (let el of skills){
     const skill = document.createElement('li');
-    skill.innerText = el;
+    const skillImg = document.createElement('img')
+    skillImg.src = el
     skillsList.appendChild(skill);
+    skill.appendChild(skillImg)
 }
 
     // Handle Message Form Submit 
@@ -108,4 +110,4 @@ newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 messageSection.style.display = "block";
 messageForm.reset();
-});
+    });
