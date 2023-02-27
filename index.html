@@ -19,38 +19,40 @@
 <div class="wrapper">
     <header class="header">
         <div class="container">
-            <h1 class="title_name">Oxana Michkasova</h1>
-<!-- Navigation -->
+            <!-- Navigation -->
             <nav class="header_nav">
-                <ul class="header_nav__list">
-                    <li class="nav_item">
-                        <a href="" class="nav_link">Home</a></li>
-                    <li class="nav_item">
-                        <a href="" class="nav_link">About</a></li>
-                    <li class="nav_item">
-                        <a href="" class="nav_link">Portfolio</a></li>
-                    <li class="nav_item">
-                        <a href="" class="nav_link">Contact</a></li>
-                </ul>
-        <hr>
+                <div class="header_menu">
+                    <h1 class="logo"><img class="img_logo" src="images/downloadlogo.png" alt="logo"></h1>
+                        <ul class="header_nav__list">
+                            <!-- <li class="nav_item">
+                                <a href="" class="nav_link">Home</a></li>
+                            <li class="nav_item"> -->
+                                <a href="#intro" class="nav_link">About</a></li>
+                            <li class="nav_item">
+                                <a href="projects" class="nav_link">Projects</a></li>
+                            <li class="nav_item">
+                                    <a href="#experience" class="nav_link">Experience</a></li>
+                            <li class="nav_item">
+                                <a href="#connect" class="nav_link">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
-        </div>
-</header>
+        </div>  
+    </header>
 
+<div class="main-wrapper">
 <main class="main">
-    <!-- Intro section with image --><img src="images/selfpic.jpg" alt="portait"  width ="300px">
-<section id="intro">   
-    <div class="picture">
-        
-    </div>
-    <div class="picture">
-        <p class="intro_text">Hi there,</p>
-    </div>
-    <div class="picture">
-        <p class="intro_text">I'm Oxana</p>
-    </div>
-    <div class="picture">
-        <p class="intro_text">Frontend Developer</p>
+    <!-- Intro section with image -->
+<section id="intro"> 
+    <div class="main_picture">  
+        <div class="picture">
+            <img class="user_pic" src="images/selfpic.jpg" alt="portait"  width ="300px"> 
+        </div>
+        <div class="typing_text">
+            <p class="text">Hi there,</p>
+            <p class="text">I'm Oxana</p>
+            <p class="text">Frontend Developer</p>
+        </div>
     </div>
 </section>
 
@@ -76,17 +78,17 @@
 
             <div class="job_lists">
 
-                <p class="company_title">AngelEye Photography</p>
-                    <p class="company_position">Photographer/Business owner <br>
-                <span class="company_location">RI, NH, ME, MA, USA</span></p>
-                <p class="company_title" >Dwellworks</p>
-                    <p class="company_position"> Relocation consultant <br>
+                <p class="company_title">Photographer/Business owner</p>
+                    <p class="company_position">AngelEye Photography<br>
+                        <span class="company_location">RI, NH, ME, MA, USA</span></p>
+                <p class="company_title">Relocation consultant</p>
+                    <p class="company_position"> Dwellworks <br>
                         <span class="company_location">Boston, MA, USA</span></p>
-                <p class="company_title">Blueport Commerce</p>
-                    <p class="company_position">Digital Imaging Specialist <br>
+                <p class="company_title">Digital Imaging Specialist</p>
+                    <p class="company_position">Blueport Commerce <br>
                         <span class="company_location">Watertown, MA,  USA</span></p>
-                <p class="company_title">AutoPartsConnect</p>
-                    <p class="company_position">Jr. Web Developer <br>   
+                <p class="company_title">Jr. Web Developer</p>
+                    <p class="company_position">AutoPartsConnect<br>   
                         <span class="company_location">Budapest, Hungary</span></p> 
             </div>
         </div>
@@ -94,13 +96,14 @@
 
 <!-- Skills section -->
 <section id="skills">
-    <div class="skills_content">
+    <div class="skills_content_wrapper">
         <div class="skills_title">
             <h3 class="main_title">Skills</h3>
         </div>
 
         <div class="skills_items">
             <ul>
+            
     
             </ul>
 <hr>
@@ -108,44 +111,40 @@
     </div>
 </section>
 
-<!-- Contact section -->
+<!-- Connect section -->
 <section id="connect">
     <div class="connect_content">
         <div class="connect_title">
             <h3 class="main_title">Connect</h3>
         </div>
-
+        <div class="connect_items_wrapper">
         <div class="connect_items">
-            <p><a href="mailto:oxana.mitch@gmail.com"><i class="fa-solid fa-envelope"></i></a></p>
-            <p><a href="https://github.com/oxangyal"><i class="fa-brands fa-github"></i></a></p>
-            <p><a href="https://www.instagram.com/angeleyelive/"><i class="fa-brands fa-square-instagram"></i></a></p>
-            <p><a href="https://www.linkedin.com/in/oxanamich/"><i class="fa-brands fa-linkedin"></i></a></p>
+            <p class="connect_icons"><a href="mailto:oxana.mitch@gmail.com"><img src="./images/icon_mail.png"></img></a></p>
+            <p><a href="https://github.com/oxangyal"><img src="./images/icon_gitsm.png"></img></a></p>
+            <p><a href="https://www.instagram.com/angeleyelive/"><img src="./images/icon_insta.png"></img></a></p>
+            <p><a href="https://www.linkedin.com/in/oxanamich/"><img src="./images/icon_link.png"></img></a></p>
+        </div>
         </div>
     </div>
 </section>
 
 <!-- Leave a message section -->
 <section id="submit_form">
-    <div class="contact_form">
-
-        <h3 class="main_title">Leave a Message</h3>
-
-            <form name="leave_message">
-                <div class="form_inputs">
+    <h3 class="main_title">Leave a Message</h3>
+    <div class="contact_form_wrapper">
+        <div class="contact_form">
+            <form name="leave_message" id="form_items">
         <!-- <label for="name">Name:</label> -->
                     <input type="text" name="name" required="true" placeholder="Your name">
-        <br>
-        <br>
+    
         <!-- <label for="email">Email:</label> -->
                     <input type="email" name="email" required="true" placeholder="email@example.com">
-        <br>
-        <br>
+    
         <!-- <label for="message">Message:</label> -->
                     <textarea name="message" required="true" placeholder="Leave a message"></textarea>
-        <br>
-        <br>
+    
                     <button type="submit" class="button_submit"><span class="button_text">Submit</span></button>
-        <br>
+        <!-- <br> -->
     </div>
     </form>
 </div>
@@ -153,10 +152,13 @@
 
 <!-- Messages section -->
 <section id="messages">
+    <div class="messages_wrapper">
         <h3 class="main_title">Messages</h3>
             <ul>
 
             </ul>
+  
+        </div>
 </section>
 </main>
 </div>
@@ -164,5 +166,6 @@
 </footer>
 <script src="js/index.js"></script>
 <script src="https://kit.fontawesome.com/cdb3649559.js" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
