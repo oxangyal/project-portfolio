@@ -86,7 +86,7 @@ li {
 }
 
 .nav_link{
-    color: rgba(26, 13, 123, 0.847);
+    color: #292695;
 }
 
 .logo{
@@ -265,7 +265,7 @@ input[type=email] {
     border: 0;
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-    background-color: rgb(220,227,224);
+    background-color: rgba(220, 227, 224, 0.253);
 }
 
 textarea {
@@ -276,7 +276,7 @@ textarea {
     border-radius: 10px;
     border: 0;
     box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-    background-color: rgb(220,227,224);
+    background-color: rgba(220, 227, 224, 0.253);
 }
 
 .button_submit {
@@ -547,7 +547,7 @@ footer > p{
         top: 0;
         right: -100%;
         width: 180px;
-        height: 60%;
+        height: 70%;
         padding: 80px 0;
         list-style: none;
         background-color: #d5c6af;
@@ -569,5 +569,10 @@ footer > p{
         background-color: #e7d9c2;
     }
 
+    input[type=text],
+    input[type=email],
+    textarea {
+        background-color: #edca7081;
+    }
 
 }
