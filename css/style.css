@@ -421,7 +421,12 @@ footer{
 footer > p{
     margin: 5px;
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    color: #292695;
+    text-shadow: 0.5px 1px 1px rgb(128, 60, 145);
+
 }
 
 .hamburger_menu {
@@ -474,6 +479,7 @@ footer > p{
     #messages,
     #skills {text-align: left;}
 
+    
     /* Hamburger menu */
 
     .hamburger_menu {
