@@ -546,12 +546,13 @@ footer > p{
         visibility: hidden;
         top: 0;
         right: -100%;
-        width: 180px;
-        height: 70%;
+        width: 160px;
+        height: 60%;
         padding: 80px 0;
         list-style: none;
-        background-color: #d5c6af;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        background-color: #efc78b;
+        box-shadow: 1px 0px 6px rgba(0.5, 0.5, 0, .2);
+        border-radius: 5% 0% 0% 5%;
         transition-duration: .25s;
     }
     
@@ -566,7 +567,8 @@ footer > p{
         transition-duration: .25s;
     }
     .menu__item:hover {
-        background-color: #e7d9c2;
+        background-color: #edd7a8;
+        border-radius: 7%;
     }
 
     input[type=text],
