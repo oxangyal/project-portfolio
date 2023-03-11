@@ -50,6 +50,7 @@ messageList.appendChild(newMessage);
 // Create "Remove" button
         
 const removeButton = document.createElement("button");
+        
 removeButton.innerText = "Remove";
 removeButton.type = "button";
 removeButton.addEventListener("click",
@@ -111,3 +112,7 @@ messageList.appendChild(newMessage);
 messageSection.style.display = "block";
 messageForm.reset();
     });
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos");
+githubRequest.send();
