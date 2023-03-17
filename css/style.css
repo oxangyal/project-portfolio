@@ -183,7 +183,7 @@ li {
 }
 /* Sills */
 
-#skills, #connect, #projects {text-align: center;}
+#skills, #connect, #project {text-align: center;}
 
 .skills_content_wrapper{
     display: flex;
@@ -208,12 +208,12 @@ li {
 /* 
 Projects */
 
-.projects_items{
+.project_items{
     display: flex;
     justify-content: center;
 }
 
-.projects_list{
+.project_list{
     width: 400px;
     display: flex;
     flex-direction: column;
