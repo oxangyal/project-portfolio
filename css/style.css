@@ -183,7 +183,7 @@ li {
 }
 /* Sills */
 
-#skills{text-align: center;}
+#skills, #connect, #projects {text-align: center;}
 
 .skills_content_wrapper{
     display: flex;
@@ -193,7 +193,6 @@ li {
     display: flex;
 }
 
-#connect{text-align: center;}
 
 .connect_items{
     width: 400px;
@@ -206,7 +205,21 @@ li {
     display: flex;
     justify-content: center;
 }
+/* 
+Projects */
 
+.projects_items{
+    display: flex;
+    justify-content: center;
+}
+
+.projects_list{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    list-style: none;
+}
   /* Typing Animation */
 
 
@@ -220,15 +233,15 @@ li {
     
 }
 
-.typing_text p:nth-child(1).text{
+.typing_text p:nth-child(1n).text{
     animation-name: typing1; 
 }
 
-.typing_text p:nth-child(2).text{
+.typing_text p:nth-child(2n).text{
     animation-name: typing2; 
 }
 
-.typing_text p:nth-child(3).text{
+.typing_text p:nth-child(3n).text{
     animation-name: typing3; 
 }
 
@@ -477,7 +490,8 @@ footer > p{
     #submit_form,
     #intro,
     #messages,
-    #skills {text-align: left;}
+    #skills,
+    #projects {text-align: left;}
 
     
     /* Hamburger menu */
