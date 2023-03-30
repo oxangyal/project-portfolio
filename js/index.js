@@ -33,24 +33,24 @@ messageForm[0].addEventListener('submit',
     const name = event.target.name.value;
     const email = event.target.email.value;
     const message = event.target.message.value;
-    
+
     console.log(`Name: ${name};`, `Email: ${email};`, `Message: ${message}`)  
-    
-// Display Messages in List
-    
+
+    // Display Messages in List
+
 const messageSection = document.getElementById("messages");
 messageSection.hidden = true;
-    
+
 const messageList = messageSection.querySelector('ul');
 const newMessage = document.createElement("li");
-    
+
 newMessage.innerHTML = `<a href="mailto: ${email}">${name}</a> wrote:  <span>${message}</span>`
 
 messageList.appendChild(newMessage);
-// Create "Remove" button
-        
+    // Create "Remove" button
+
 const removeButton = document.createElement("button");
-        
+
 removeButton.innerText = "Remove";
 removeButton.type = "button";
 removeButton.addEventListener("click",
@@ -58,34 +58,34 @@ removeButton.addEventListener("click",
     const entry = removeButton.parentNode;
     entry.remove();
     });
-        
+
 newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 
 messageSection.hidden = false;
 messageForm.item(0).reset();
 
-// Create "Edit" button
+    // Create "Edit" button
 
 const editButton = document.createElement("button");
 editButton.innerText = "Edit";
 editButton.type = "button";
-        
-// Create "Done" button   
-        
+
+    // Create "Done" button   
+
 const doneButton = document.createElement("button");
 doneButton.innerText = "Done";
 doneButton.type = "button";
 doneButton.style.display = "none";
-        
+
 editButton.addEventListener("click",
             () => {
     const entry = editButton.parentNode;
     const editMessage = entry.querySelector("span");
-                
+
     editMessage.contentEditable = "true";
     editMessage.focus();
-                
+
     editMessage.style.backgroundColor = "#fff";
     doneButton.style.display = "initial";
     editButton.style.display = "none";
@@ -96,25 +96,27 @@ doneButton.addEventListener("click",
 
     const entry = doneButton.parentNode;
     const editMessage = entry.querySelector("span");
-                
+
     editMessage.contentEditable = false;
-                
+
     editMessage.style.backgroundColor = "#fff";
     editButton.style.display = "initial";
     doneButton.style.display = "none";
     });
-        
+
 newMessage.appendChild(editButton);
 newMessage.appendChild(doneButton);
 newMessage.appendChild(removeButton);
-        
+
 messageList.appendChild(newMessage);
 messageSection.style.display = "block";
 messageForm.reset();
-    });
+});
+
+    // Fetch API gitHub repositories
 
 let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos");
+githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
 githubRequest.send();
 
 githubRequest.addEventListener("load",
@@ -128,4 +130,6 @@ githubRequest.addEventListener("load",
             project.innerHTML = `<a class="link link--no-decor" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
             projectList.appendChild(project);
         }
-})
+    })
+
+
