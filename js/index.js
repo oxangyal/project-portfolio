@@ -115,21 +115,61 @@ messageForm.reset();
 
     // Fetch API gitHub repositories
 
-let githubRequest = new XMLHttpRequest();
+const githubRequest = new XMLHttpRequest()
 githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
+
+githubRequest.addEventListener('load', function () {
+    const data = JSON.parse(this.response)
+
+    // Filter out irrelevant repositories
+
+    const filteredData = data.filter((repo) =>
+        repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05')
+    )
+
+    const projectSection = document.querySelector('#project')
+    const projectList = projectSection.querySelector('ul')
+
+    for (let repository of filteredData) {
+        const project = document.createElement('li')
+        const projectName = repository.name.toLowerCase();
+
+if (projectName.includes('eridanus-intro')) {
+    project.innerHTML = `
+    <a class="link link--no-decor" href="${repository.html_url}">
+        <img src="./images/CTDboot.png" alt="Eridanus Intro"  class="img__logo_item">
+    </a>`;
+} else if (projectName.includes('thankyouwebsiteqa05')) {
+    project.innerHTML = `
+    <a class="link link--no-decor" href="${repository.html_url}">
+        <img src="./images/redRover.png" alt="Thankyou Website QA05" class="img__logo_item">
+    </a>`;
+} else {
+    continue;
+}
+
+projectList.appendChild(project);
+
+    }
+})
 githubRequest.send();
 
-githubRequest.addEventListener("load",
-    event => {
-    let repositories = JSON.parse(githubRequest.response);
-        console.log(repositories);
-        let projectSection = document.getElementById("#project");
-        let projectList = project.querySelector('ul');
-        for (let i = 0; i < repositories.length; i++) {
-            let project = document.createElement("li");
-            project.innerHTML = `<a class="link link--no-decor" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
-            projectList.appendChild(project);
-        }
-    })
+
+// let githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
+// githubRequest.send();
+
+// githubRequest.addEventListener("load",
+//     event => {
+//     let repositories = JSON.parse(githubRequest.response);
+//         console.log(repositories);
+//         let projectSection = document.getElementById("#project");
+//         let projectList = project.querySelector('ul');
+//         for (let i = 0; i < repositories.length; i++) {
+//             let project = document.createElement("li");
+//             project.innerHTML = `<a class="link link--no-decor" href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+//             projectList.appendChild(project);
+//         }
+//     })
 
 
