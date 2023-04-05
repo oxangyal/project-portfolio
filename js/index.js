@@ -10,17 +10,45 @@ footer.appendChild(copyright);
 
     // Add Skills Section
 
-const skills = ['./images/icon_js.png', "./images/icon_html.png", "./images/icon_css.png", "./images/icon_figma.png", "./images/icon_python.png", "./images/icon_ps.png", "./images/icon_git.png"];
+
+    
+    //Adding alt attribute to <img>
+
+const skills = [
+    { src: './images/icon_js.png', alt: 'JavaScript icon' },
+    { src: './images/icon_html.png', alt: 'HTML icon' },
+    { src: './images/icon_css.png', alt: 'CSS icon' },
+    { src: './images/icon_figma.png', alt: 'Figma icon' },
+    { src: './images/icon_python.png', alt: 'Python icon' },
+    { src: './images/icon_ps.png', alt: 'Photoshop icon' },
+    { src: './images/icon_git.png', alt: 'Git icon' }
+];
+
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector("ul");
 
-for (let el of skills){
-    const skill = document.createElement('li');
-    const skillImg = document.createElement('img')
-    skillImg.src = el
-    skillsList.appendChild(skill);
-    skill.appendChild(skillImg)
-}
+skills.forEach(skill => {
+    const skillItem = document.createElement('li');
+    const skillImg = document.createElement('img');
+    skillImg.src = skill.src;
+    skillImg.alt = skill.alt;
+    skillItem.appendChild(skillImg);
+    skillsList.appendChild(skillItem);
+});
+
+
+// Old code without alt
+// const skills = ['./images/icon_js.png', "./images/icon_html.png", "./images/icon_css.png", "./images/icon_figma.png", "./images/icon_python.png", "./images/icon_ps.png", "./images/icon_git.png"];
+// const skillsSection = document.getElementById('skills');
+// const skillsList = skillsSection.querySelector("ul");
+// for (let el of skills){
+//     const skill = document.createElement('li');
+//     const skillImg = document.createElement('img')
+
+//     skillImg.src = el
+//     skillsList.appendChild(skill);
+//     skill.appendChild(skillImg)
+// }
 
     // Handle Message Form Submit 
 
