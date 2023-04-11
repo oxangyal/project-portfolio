@@ -1,4 +1,4 @@
-    // Insert Copyright Text in Footer via JavaScript
+// Insert Copyright Text in Footer via JavaScript
 
 const today = new Date();
 const thisYear = today.getFullYear();
@@ -11,7 +11,7 @@ footer.appendChild(copyright);
     // Add Skills Section
 
 
-    
+
     //Adding alt attribute to <img>
 
 const skills = [
@@ -37,7 +37,7 @@ skills.forEach(skill => {
 });
 
 
-// Old code without alt
+    // Old code without alt
 // const skills = ['./images/icon_js.png', "./images/icon_html.png", "./images/icon_css.png", "./images/icon_figma.png", "./images/icon_python.png", "./images/icon_ps.png", "./images/icon_git.png"];
 // const skillsSection = document.getElementById('skills');
 // const skillsList = skillsSection.querySelector("ul");
@@ -143,45 +143,89 @@ messageForm.reset();
 
     // Fetch API gitHub repositories
 
-const githubRequest = new XMLHttpRequest()
-githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
+// const githubRequest = new XMLHttpRequest()
+// githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
 
-githubRequest.addEventListener('load', function () {
-    const data = JSON.parse(this.response)
+// githubRequest.addEventListener('load', function () {
+//     const data = JSON.parse(this.response)
 
-    // Filter out irrelevant repositories
+//     // Filter out irrelevant repositories
 
-    const filteredData = data.filter((repo) =>
-        repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05')
-    )
+//     const filteredData = data.filter((repo) =>
+//         repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05')
+//     )
 
-    const projectSection = document.querySelector('#project')
-    const projectList = projectSection.querySelector('ul')
+//     const projectSection = document.querySelector('#project')
+//     const projectList = projectSection.querySelector('ul')
 
-    for (let repository of filteredData) {
-        const project = document.createElement('li')
-        const projectName = repository.name.toLowerCase();
+//     for (let repository of filteredData) {
+//         const project = document.createElement('li')
+//         const projectName = repository.name.toLowerCase();
+
+// if (projectName.includes('eridanus-intro')) {
+//     project.innerHTML = `
+//     <a class="link link--no-decor" href="${repository.html_url}">
+//         <img src="./images/CTDboot.png" alt="Eridanus Intro"  class="img__logo_item">
+//     </a>`;
+// } else if (projectName.includes('thankyouwebsiteqa05')) {
+//     project.innerHTML = `
+//     <a class="link link--no-decor" href="${repository.html_url}">
+//         <img src="./images/redRover.png" alt="Thankyou Website QA05" class="img__logo_item">
+//     </a>`;
+// } else {
+//     continue;
+// }
+
+// projectList.appendChild(project);
+
+//     }
+// })
+// githubRequest.send();
+
+
+fetch('https://api.github.com/users/oxangyal/repos')
+.then((res) => res.json())
+    .then((data) => {
+    
+  // Filter out irrelevant repositories
+const filteredData = data.filter((repo) =>
+repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05') || repo.name.includes('shaddyfurniture')  
+)
+
+const projectSection = document.querySelector('#project')
+const projectList = projectSection.querySelector('ul')
+
+for (let repository of filteredData) {
+    const project = document.createElement('li')
+    const projectName = repository.name.toLowerCase();
 
 if (projectName.includes('eridanus-intro')) {
-    project.innerHTML = `
-    <a class="link link--no-decor" href="${repository.html_url}">
-        <img src="./images/CTDboot.png" alt="Eridanus Intro"  class="img__logo_item">
-    </a>`;
+project.innerHTML = `
+<a class="link link--no-decor" href="${repository.html_url}">
+    <img src="./images/CTDboot.png" alt="Eridanus Intro"  class="img__logo_item">
+</a>`;
 } else if (projectName.includes('thankyouwebsiteqa05')) {
+project.innerHTML = `
+<a class="link link--no-decor" href="${repository.html_url}">
+    <img src="./images/redRover.png" alt="Thankyou Website QA05" class="img__logo_item">
+</a>`;
+} else if (projectName.includes('shaddyfurniture')) {
     project.innerHTML = `
     <a class="link link--no-decor" href="${repository.html_url}">
-        <img src="./images/redRover.png" alt="Thankyou Website QA05" class="img__logo_item">
+        <img src="./images/shaddy_logo.png" alt="Shady Furniture website" class="img__logo_item">
     </a>`;
 } else {
-    continue;
+continue;
 }
 
 projectList.appendChild(project);
 
-    }
-})
-githubRequest.send();
+}
+    })
 
+    .catch((error) => {
+        console.error('Error occuried', error);
+    });
 
 // let githubRequest = new XMLHttpRequest();
 // githubRequest.open("GET", "https://api.github.com/users/oxangyal/repos", true);
@@ -199,5 +243,6 @@ githubRequest.send();
 //             projectList.appendChild(project);
 //         }
 //     })
+
 
 
