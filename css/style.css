@@ -82,7 +82,8 @@ p{
     background-position: 50% 25%;
     height: 100px;
     border-bottom: rgba(220, 227, 224, 0.253) solid 4px;
-    box-shadow: 2px 2px 5px 0px rgba(59, 55, 55, 0.75);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.319);
+    /* box-shadow: 2px 2px 5px 0px rgba(59, 55, 55, 0.75); */
 }
 
 ul:not(.header_nav__list) {
