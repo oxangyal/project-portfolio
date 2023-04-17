@@ -8,7 +8,7 @@
 
 body {
     background: url("../images/backgroundnew.jpg") no-repeat center;
-    width: 100vw;
+    max-width: 100vw;
     /* max-width: 100%; */
     background-size: cover;
     font-family: 'Poppins', sans-serif;
@@ -25,7 +25,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* Header */
 
 .header {
@@ -34,12 +33,13 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: center;
+
 }
 
 .header_nav {
     top: 0;
     width: 100%;
-    position: relative;        
+    position: relative;
 }
 
 h1{
@@ -73,6 +73,16 @@ p{
 .header_menu{
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(233, 231, 224);;
+    background-size: 100%;
+    background-position: 50% 25%;
+    height: 100px;
+    border-bottom: rgba(220, 227, 224, 0.253) solid 4px;
+    box-shadow: 2px 2px 5px 0px rgba(59, 55, 55, 0.75);
 }
 
 ul:not(.header_nav__list) {
@@ -125,6 +135,7 @@ li {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
 }
+
 /* hr{
     width: 600px;
     display: flex;
@@ -194,12 +205,20 @@ li {
 }
 /* Sills */
 
-#skills, #connect, #project {text-align: center;}
+#skills, #connect, #project{
+    text-align: center;
+    padding-top: 75px;
+}
+
+#experience, #intro{
+    padding-top: 80px;
+}
 
 .skills_content_wrapper{
     display: flex;
     justify-content: center;
 }
+
 .skills_items li{
     display: flex;
 }
@@ -250,14 +269,13 @@ Projects */
     opacity: 2;
     /* transition: opacity 0.2s ease; */
     transition: transform 0.3s ease-in-out;
-
 }
 
 .img__logo_item:hover {
     /* opacity: 0.3; */
     transform: scale(1.3);
-
 }
+
   /* Typing Animation */
 
 
@@ -499,7 +517,7 @@ footer > p{
     * {
         font-size: 14px;
     }
-    
+
     body {
         background: url("../images/background1.jpg") no-repeat center; 
         font-size: 20px;
@@ -517,7 +535,7 @@ footer > p{
     .type_text{
         font-size: 14px;
     }
-    
+
     ul.header_nav__list {
         display: none;
     }
@@ -526,18 +544,23 @@ footer > p{
         display: none;
     }
 
+    .header_menu{
+        background-color:  #efc78b;
+        box-shadow: 2px 2px 0px 0px #efc78b;
+    }
+
     .skills_items {
         /* background-color: blue; */
         padding: 0px;
     }
 
-.skills_list {
+    .skills_list {
         display: flex;
         justify-content: center;
         flex-flow: row wrap;
         padding: 0px;
         gap: 5px;
-}
+    }
 
     #experience, 
     #connect,
@@ -547,33 +570,36 @@ footer > p{
     #skills,
     #project {text-align: left;}
 
-    
+
     /* Hamburger menu */
 
     .hamburger_menu {
         display: flex;
-
     }
+
     #menu__toggle {
         opacity: 0;
     }
-    
+
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
     }
+
     #menu__toggle:checked ~ .menu__box {
         visibility: visible;
         right: 0;
     }
-    
+
     .menu__btn {
         display: flex;
         align-items: center;
@@ -598,15 +624,17 @@ footer > p{
     
         transition-duration: .25s;
     }
+
     .menu__btn > span::before {
         content: '';
         top: -8px;
     }
+
     .menu__btn > span::after {
         content: '';
         top: 8px;
     }
-    
+
     .menu__box {
         display: flex;
         flex-direction: column;
@@ -623,7 +651,7 @@ footer > p{
         border-radius: 5% 0% 0% 5%;
         transition-duration: .25s;
     }
-    
+
     .menu__item {
         display: block;
         padding: 12px 24px;
@@ -634,6 +662,7 @@ footer > p{
         text-decoration: none;
         transition-duration: .25s;
     }
+
     .menu__item:hover {
         background-color: #edd7a8;
         border-radius: 7%;
@@ -645,37 +674,34 @@ footer > p{
         background-color: #edca7081;
     }
 
-
     .job_list{
         margin-left: 100px auto;
     }
 }
+
 @media all and (max-width: 280px) {
-*{
-    font-size: 10px;
-}
 
-.type_text{
-    font-size: 10px;
-}
+    *{
+        font-size: 10px;
+    }
 
-.user_pic{
-    margin-left: 40px;
-}
+    .type_text{
+        font-size: 10px;
+    }
 
-.contact_form_wrapper{
-    margin-left: 40px;
-}
+    .user_pic{
+        margin-left: 40px;
+    }
 
-.company_title, 
-.company_position,
-.company_location, 
-.company_years {
+    .contact_form_wrapper{
+        margin-left: 40px;
+    }
+
+    .company_title, 
+    .company_position,
+    .company_location, 
+    .company_years {
     font-size: 9px;
-}
-
-hr{
-    display: none;
-}
+    }
 
 }
