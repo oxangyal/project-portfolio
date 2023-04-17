@@ -547,7 +547,8 @@ footer > p{
 
     .header_menu{
         background-color:  #efc78b;
-        box-shadow: 2px 2px 0px 0px #efc78b;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.319);
+        /* box-shadow: 2px 2px 0px 0px #efc78b; */
     }
 
     .skills_items {
