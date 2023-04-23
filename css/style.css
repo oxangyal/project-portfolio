@@ -321,7 +321,8 @@ Projects */
 
 /* Submit form */
 
-#submit_form{text-align: center;}
+#submit_form{text-align: center;
+    padding-top: 100px;}
 
 .contact_form_wrapper {
     display: flex;
@@ -398,6 +399,9 @@ textarea {
     display: flex;
     justify-content: center;
 }
+ #messages{
+    padding-top: 80px;
+ }
 
 /* Experience */
 
