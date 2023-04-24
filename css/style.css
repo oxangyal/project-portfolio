@@ -231,7 +231,8 @@ li {
     width: 400px;
     display: flex;
     flex-direction:row;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+    padding-top: 35px; 
 }
 
 .connect_items_wrapper{
@@ -327,6 +328,7 @@ Projects */
 .contact_form_wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 }
 
 input[type=text],
