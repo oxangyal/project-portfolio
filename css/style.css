@@ -33,7 +33,17 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: center;
+}
 
+.img_logo {
+    opacity: 5;
+    /* transition: opacity 0.3s ease;   */
+    transition: transform 0.3s ease-in-out;
+}
+
+.img_logo:hover {
+    /* opacity: 0.5; */
+    transform: scale(1.3);
 }
 
 .header_nav {
@@ -169,12 +179,22 @@ li {
     text-transform: uppercase;
     font-size: larger;
     /* font-weight: 500; */
+
+}
+
+.nav_item{
+    opacity: 5;
+    /* transition: opacity 0.3s ease;   */
+    transition: transform 0.3s ease-in-out;
+}
+.nav_item:hover{
+transform: scale(1.15);
 }
 
 .nav_link:hover {
     color: rgba(190, 184, 233, 0.847);
+    
 }
-
 
 #intro{
     margin-top: 50px;
@@ -401,6 +421,7 @@ textarea {
     display: flex;
     justify-content: center;
 }
+ 
  #messages{
     padding-top: 80px;
  }
