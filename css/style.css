@@ -203,6 +203,7 @@ transform: scale(1.15);
     align-content: flex-start;
     justify-content: flex-start;
 }
+
 .about_text_content {
     padding: 2px;
     font-size: 24px;
@@ -302,7 +303,6 @@ Projects */
 
   /* Typing Animation */
 
-
 .typing_text p{
     overflow: hidden; 
     white-space: nowrap; 
@@ -310,7 +310,6 @@ Projects */
     animation-duration: 3.5s; 
     animation-timing-function: steps(40, end);
     animation-iteration-count: infinite;
-    
 }
 
 .typing_text p:nth-child(1n).text{
@@ -366,21 +365,19 @@ input[type=email] {
 /* 
 input:focus,
 input:active {
-  outline: 2px solid rgb(78, 80, 79);
-  background-color: rgba(220, 227, 224, 0.253); 
+    outline: 2px solid rgb(78, 80, 79);
+    background-color: rgba(220, 227, 224, 0.253); 
 }
 
 textarea:focus,
 textarea:active {
     outline: 2px solid rgba(220, 227, 224, 0.253); 
-  background-color: rgba(220, 227, 224, 0.253); 
+    background-color: rgba(220, 227, 224, 0.253); 
 } */
 
 /* input:focus {
     outline: 2px solid #afafad;;
 } */
-
-
 
 textarea {
     width: 300px;
@@ -421,10 +418,10 @@ textarea {
     display: flex;
     justify-content: center;
 }
- 
- #messages{
+
+#messages{
     padding-top: 80px;
- }
+}
 
 /* Experience */
 
@@ -445,8 +442,7 @@ textarea {
     margin-left: 150px;
     padding-top: 50px;
     gap: 10px;
-    /* grid-template-areas: 
-        "company_title" "company_position" "company_years"; */
+    /* grid-template-areas:        "company_title" "company_position" "company_years"; */
 }
 
 .company_title {
@@ -530,7 +526,6 @@ textarea {
 
 /* #messages span:hover {color: rgb(251,139,67)} */
 
-
 #messages li {
     /* background-color: aliceblue; */
     box-shadow: 4px 4px 10px rgba(8, 8, 8, 0.5);
@@ -557,7 +552,6 @@ footer > p{
     justify-content: center;
     color: #211F7A;
     text-shadow: 0.5px 1px 1px rgb(128, 60, 145);
-
 }
 
 .hamburger_menu {
@@ -665,7 +659,7 @@ footer > p{
         cursor: pointer;
         z-index: 1;
     }
-    
+
     .menu__btn > span,
     .menu__btn > span::before,
     .menu__btn > span::after {
@@ -726,7 +720,6 @@ footer > p{
     input[type=email],
     textarea {
         background-color: #edca7081;
-        
     }
 
     .job_list{
@@ -762,5 +755,4 @@ footer > p{
     .company_years {
     font-size: 9px;
     }
-   
 }
