@@ -421,6 +421,7 @@ textarea {
 
 #messages{
     padding-top: 80px;
+    border: none;
 }
 
 /* Experience */
@@ -484,6 +485,21 @@ textarea {
     flex-wrap: nowrap;
 }
 
+/* .skills_list li{
+        font-size: 5em; 
+        float: left; 
+        margin: 3px 20px; 
+        -webkit-transition: 0.6s ease-out;
+        -moz-transition:  0.6s ease-out;
+        transition:  0.6s ease-out;
+      }
+       
+    
+        .skills_list li:hover{
+          -webkit-transform: rotateZ(720deg);
+          -moz-transform: rotateZ(720deg);
+          transform: rotateZ(720deg);
+        } */
 
 /* Leave a message */
 
@@ -728,6 +744,14 @@ footer > p{
 
     .company_title, .company_position, .company_years{
         font-size: 12px;
+    }
+
+    .project_list{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 0px;
+        gap: 5px;
     }
 }
 
