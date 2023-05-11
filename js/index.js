@@ -6,11 +6,9 @@ const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
 copyright.innerHTML = `&copy; Oxana Michkasova ${thisYear}`;
-footer.appendChild(copyright);
+footer.appendChild(copyright); 
 
     // Add Skills Section
-
-
 
     //Adding alt attribute to <img>
 
@@ -189,7 +187,7 @@ fetch('https://api.github.com/users/oxangyal/repos')
     
   // Filter out irrelevant repositories
 const filteredData = data.filter((repo) =>
-repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05') || repo.name.includes('shaddyfurniture')  
+repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05') || repo.name.includes('shaddyfurniture' ) || repo.name.includes('worldclock') 
 )
 
 const projectSection = document.querySelector('#project')
@@ -212,7 +210,13 @@ project.innerHTML = `
 } else if (projectName.includes('shaddyfurniture')) {
     project.innerHTML = `
     <a class="link link--no-decor" href="${repository.html_url}">
-        <img src="./images/shaddy_logo.png" alt="Shady Furniture website" class="img__logo_item">
+        <img src="./images/shaddy_logo.png" alt="Shaddy Furniture website" class="img__logo_item">
+    </a>`;
+}
+else if (projectName.includes('worldclock')) {
+    project.innerHTML = `
+    <a class="link link--no-decor" href="${repository.html_url}">
+        <img src="./images/clock.png" alt="Clock" class="img__logo_item">
     </a>`;
 } else {
 continue;
