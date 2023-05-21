@@ -19,7 +19,11 @@ const skills = [
     { src: './images/icon_figma.png', alt: 'Figma icon' },
     { src: './images/icon_python.png', alt: 'Python icon' },
     { src: './images/icon_ps.png', alt: 'Photoshop icon' },
-    { src: './images/icon_git.png', alt: 'Git icon' }
+    { src: './images/icon_git.png', alt: 'Git icon' },
+    { src: './images/icon_word.png', alt: 'Wordpress icon' },
+    { src: './images/icon_sql.png', alt: 'SQL icon' },
+    { src: './images/icon_react.png', alt: 'React icon' },
+    { src: './images/icon_bootstrap.png', alt: 'Bootstrap icon' }
 ];
 
 const skillsSection = document.getElementById('skills');
@@ -187,7 +191,7 @@ fetch('https://api.github.com/users/oxangyal/repos')
     
   // Filter out irrelevant repositories
 const filteredData = data.filter((repo) =>
-repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05') || repo.name.includes('shaddyfurniture' ) || repo.name.includes('worldclock') 
+repo.name.includes('eridanus-intro') || repo.name.includes('ThankyouWebsiteQA05') || repo.name.includes('shaddyfurniture' ) || repo.name.includes('worldclock') || repo.name.includes('movingcompany')  || repo.name.includes('dicegame')
 )
 
 const projectSection = document.querySelector('#project')
@@ -212,8 +216,17 @@ project.innerHTML = `
     <a class="link link--no-decor" href="${repository.html_url}">
         <img src="./images/shaddy_logo.png" alt="Shaddy Furniture website" class="img__logo_item">
     </a>`;
-}
-else if (projectName.includes('worldclock')) {
+} else if (projectName.includes('movingcompany')) {
+    project.innerHTML = `
+    <a class="link link--no-decor" href="${repository.html_url}">
+        <img src="./images/moving.png" alt="Moving Company website" class="img__logo_item">
+    </a>`;
+} else if (projectName.includes('dicegame')) {
+    project.innerHTML = `
+    <a class="link link--no-decor" href="${repository.html_url}">
+        <img src="./images/dice.png" alt="Dice Game website" class="img__logo_item">
+    </a>`;
+} else if (projectName.includes('worldclock')) {
     project.innerHTML = `
     <a class="link link--no-decor" href="${repository.html_url}">
         <img src="./images/clock.png" alt="Clock" class="img__logo_item">
