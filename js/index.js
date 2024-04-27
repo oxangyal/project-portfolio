@@ -13,17 +13,17 @@ footer.appendChild(copyright);
     //Adding alt attribute to <img>
 
 const skills = [
-    { src: './images/icon_js.png', alt: 'JavaScript icon' },
-    { src: './images/icon_html.png', alt: 'HTML icon' },
-    { src: './images/icon_css.png', alt: 'CSS icon' },
-    { src: './images/icon_figma.png', alt: 'Figma icon' },
-    { src: './images/icon_python.png', alt: 'Python icon' },
-    { src: './images/icon_ps.png', alt: 'Photoshop icon' },
-    { src: './images/icon_git.png', alt: 'Git icon' },
-    { src: './images/icon_word.png', alt: 'Wordpress icon' },
-    { src: './images/icon_sql.png', alt: 'SQL icon' },
-    { src: './images/icon_react.png', alt: 'React icon' },
-    { src: './images/icon_bootstrap.png', alt: 'Bootstrap icon' }
+    { src: "./images/icon_js.png", alt: "JavaScript icon" },
+    { src: "./images/icon_html.png", alt: "HTML icon" },
+    { src: "./images/icon_css.png", alt: "CSS icon" },
+    { src: "./images/icon_figma.png", alt: "Figma icon" },
+    { src: "./images/icon_python.png", alt: "Python icon" },
+    { src: "./images/icon_ps.png", alt: "Photoshop icon" },
+    { src: "./images/icon_git.png", alt: "Git icon" },
+    { src: "./images/icon_word.png", alt: "Wordpress icon" },
+    { src: "./images/icon_sql.png", alt: "SQL icon" },
+    { src: "./images/icon_react.png", alt: "React icon" },
+    { src: "./images/icon_bootstrap.png", alt: "Bootstrap icon" },
 ];
 
 const skillsSection = document.getElementById('skills');
